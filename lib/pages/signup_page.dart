@@ -220,7 +220,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     padding: const EdgeInsets.only(left: 50.0, right: 50.0),
                     child: Row(
                       children: [
-                        Expanded(child: Text(" By connecting to Google, I have read and agreed to JobsPeso.com Terms of User and Privacy Policy.", maxLines: 2, overflow: TextOverflow.ellipsis, ))
+                        Expanded(child: Text("By connecting to Google, I have read and agreed to JobsPeso.com Terms of User and Privacy Policy.", maxLines: 2, overflow: TextOverflow.ellipsis, ))
                       ],
                     ),
                   )

@@ -54,43 +54,105 @@ class _HomePageState extends State<HomePage> {
                     isSearch == false
                         ? searchButton()
                         : Container(
-                            margin: EdgeInsets.only(right: 30.0),
-                            width: 280,
-                            height: 50,
-                            child: TextField(
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  hintText: "Search for jobs",
-                                  prefixIcon: Icon(Icons.search),
-                                  suffixIcon: InkWell(
-                                      onTap: () {
-                                        setState(() {
-                                          isSearch = false;
-                                        });
-                                      },
-                                      child: Icon(Icons.close))),
-                            ),
-                          )
+                      margin: EdgeInsets.only(right: 30.0),
+                      width: 280,
+                      height: 50,
+                      child: TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: "Search for jobs",
+                            prefixIcon: Icon(Icons.search),
+                            suffixIcon: InkWell(
+                                onTap: () {
+                                  setState(() {
+                                    isSearch = false;
+                                  });
+                                },
+                                child: Icon(Icons.close))),
+                      ),
+                    )
                   ],
                 )
               ],
             ),
           ),
-          SizedBox(
-            height: 20.0,
-          ),
+          SizedBox(height: 20.0),
           Expanded(
-            child: GridView.builder(
-                itemCount: 3,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(childAspectRatio: 1.3, crossAxisCount: 3),
-                itemBuilder: (_, item) {
-                  return gridViewItem();
-                }),
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 250.0),
+              padding: EdgeInsets.all(40.0),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(15.0)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Let's get started",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28, color: Colors.black),
+                  ),
+                  SizedBox(
+                    height: 50.0,
+                  ),
+                  Text(
+                    "Company name",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                  ),
+                  SizedBox(height: 8.0),
+                  Container(
+                    height: 80.0,
+                    child: TextField(
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                    ),
+                  ),
+                  Text(
+                    "Job title",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                  ),
+                  SizedBox(height: 8.0),
+                  Container(
+                    height: 80.0,
+                    child: TextField(
+                      decoration: InputDecoration(border: OutlineInputBorder()),
+                    ),
+                  ), Text(
+                    "Description",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
+                  ),
+                  SizedBox(height: 8.0),
+                  Container(
+                    height: 80.0,
+                    child: TextField(
+                      maxLines: 3,
+                      decoration: InputDecoration(border: OutlineInputBorder(),),
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  Center(
+                    child: Container(
+                      margin: EdgeInsets.only(right: 30.0),
+                      width: 160,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.blue[900],
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Post Job",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           )
         ],
       ),
     );
   }
+
 
   Widget searchButton() {
     return InkWell(
@@ -117,6 +179,17 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget gridView() {
+    return Expanded(
+      child: GridView.builder(
+          itemCount: 3,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(childAspectRatio: 1.3, crossAxisCount: 3),
+          itemBuilder: (_, item) {
+            return gridViewItem();
+          }),
     );
   }
 

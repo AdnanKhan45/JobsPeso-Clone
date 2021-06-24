@@ -36,6 +36,21 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Row(
                   children: [
+                    Container(
+                      margin: EdgeInsets.only(right: 30.0),
+                      width: 120,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.blue[900],
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Apply Job",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                      ),
+                    ),
                     isSearch == false
                         ? searchButton()
                         : Container(

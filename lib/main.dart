@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:job_peso/pages/create_employee.dart';
 import 'package:job_peso/pages/login_page.dart';
 import 'pages/home_page.dart';
 import 'pages/signup_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       title: "JobsPeso",
-      home: HomePage(),
+      home: CreateEmployee(),
     );
   }
 }

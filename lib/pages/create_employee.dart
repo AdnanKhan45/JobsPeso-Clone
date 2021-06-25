@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key key}) : super(key: key);
+class CreateEmployee extends StatefulWidget {
+  const CreateEmployee({Key key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _CreateEmployeeState createState() => _CreateEmployeeState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _CreateEmployeeState extends State<CreateEmployee> {
   bool isSearch = false;
 
   @override
@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                       width: 55,
                       height: 55,
                       decoration: BoxDecoration(
-                        color: Colors.blue[900],
-                        shape: BoxShape.circle
+                          color: Colors.blue[900],
+                          shape: BoxShape.circle
                       ),
                       child: Center(child: Icon(Icons.add, color: Colors.white,),),
                     ),
@@ -97,14 +97,14 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Let's get started",
+                    "Create new Employee",
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28, color: Colors.black),
                   ),
                   SizedBox(
                     height: 50.0,
                   ),
                   Text(
-                    "Company name",
+                    "Employee name",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
                   ),
                   SizedBox(height: 8.0),
@@ -115,7 +115,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Text(
-                    "Job title",
+                    "Email",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
                   ),
                   SizedBox(height: 8.0),
@@ -125,14 +125,13 @@ class _HomePageState extends State<HomePage> {
                       decoration: InputDecoration(border: OutlineInputBorder()),
                     ),
                   ), Text(
-                    "Description",
+                    "Password",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, letterSpacing: 0.5),
                   ),
                   SizedBox(height: 8.0),
                   Container(
                     height: 80.0,
                     child: TextField(
-                      maxLines: 3,
                       decoration: InputDecoration(border: OutlineInputBorder(),),
                     ),
                   ),
@@ -148,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       child: Center(
                         child: Text(
-                          "Post Job",
+                          "Create Employee",
                           style: TextStyle(color: Colors.white, fontSize: 18),
                         ),
                       ),
